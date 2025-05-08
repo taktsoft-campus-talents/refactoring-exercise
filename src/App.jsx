@@ -4,6 +4,8 @@ import { useState } from "react";
 function App() {
   const [selectedCountry, setSelectedCountry] = useState("de");
   const [selectedPlayer, setSelectedPlayer] = useState("jm");
+  console.log(selectedCountry);
+  console.log(selectedPlayer);
   return (
     <>
       <div className="country-box">
@@ -27,7 +29,7 @@ function App() {
         <label htmlFor="players">Wer wird Spieler des Turniers?</label>
         <select
           value={selectedPlayer}
-          onPress={(e) => {
+          onChange={(e) => {
             setSelectedPlayer(e.target.value);
           }}
           className="player-select"
